@@ -1,0 +1,29 @@
+{
+    "name": "cordova-plugin-geolocationplugin",
+    "version": "0.0.1",
+    "description": "An Android Cordova plugin that allows users to display simple Toast messages at the bottom of the screen.",
+    "cordova": {
+      "id": "cordova-plugin-geolocationplugin",
+      "platforms": [
+        "android"
+      ]
+    },
+    
+    "keywords": [
+      "Toast",
+      "Notification",
+      "Message",
+      "Alert",
+      "ecosystem:cordova",
+      "cordova-android"
+    ],
+    "engines": [
+      {
+        "name": "cordova",
+        "version": ">=3.0.0"
+      }
+    ],
+    "author": "Stanley Idesis <stan.idesis@gmail.com>",
+    "license": "MIT"
+   
+  }

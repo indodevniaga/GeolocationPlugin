@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-geolocationplugin" version="0.0.1">
+    <name>GeolocationPlugin</name>
+
+    <description>An Android Cordova plugin that allows users to display simple Toast messages at the bottom of the screen.</description>
+    <license>MIT</license>
+
+    <keywords>cordova,android,toast,message,alert</keywords>
+    
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+  
+    <js-module src="www/geolocationplugin.js" name="geolocationPlugin">
+        <clobbers target="window.plugins.geolocationPlugin" />
+    </js-module>
+    <platform name="android">
+    <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-feature android:name="android.hardware.location.gps" />
+        </config-file>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="GeolocationPlugin">
+                <param name="android-package" value="com.dataon.cordova.plugin.GeolocationPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/GeolocationPlugin.java" target-dir="src/com/dataon/cordova/plugin" />
+    </platform>
+</plugin>
